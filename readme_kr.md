@@ -1,4 +1,4 @@
- [**한국어**](README_KR.md) | [**English**](README.md)
+ [**English**](README.md) | [**한국어**](README_KR.md)
 
 # Bid-Analysis-Agent
 
