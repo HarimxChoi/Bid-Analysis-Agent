@@ -1,8 +1,4 @@
-<div align="right">
-
-**[ KR ]** | **EN**
-
-</div>
+ [**English**](README.md) | [**한국어**](README_KR.md)
 
 # 🤖 Bid-Analysis-Agent: An End-to-End AI System
 
