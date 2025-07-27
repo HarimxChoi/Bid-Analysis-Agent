@@ -1,3 +1,5 @@
+ [**한국어**](README_KR.md) | [**English**](README.md)
+
 # Bid-Analysis-Agent
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
