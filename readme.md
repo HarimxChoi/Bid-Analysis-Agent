@@ -1,3 +1,9 @@
+<div align="right">
+
+**[ KR ]** | **EN**
+
+</div>
+
 # 🤖 Bid-Analysis-Agent: An End-to-End AI System
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
