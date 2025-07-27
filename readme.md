@@ -33,15 +33,15 @@ graph TD
     end
 
     subgraph "Phase 2: Core AI Model Development"
-        C --> D[Train Primary Review AI<br/>Binary Classifier (FT RoBERTa+LoRA)]
-        C --> E[Train Secondary Review AI<br/>Multi-Class Classifier (FT RoBERTa+LoRA)]
-        C --> F[Build Knowledge Base<br/>Semantic Search DB (SBERT + Faiss)]
+        C --> D[Train Primary Review AI<br/>Binary Classifier: FT RoBERTa ＋ LoRA]
+        C --> E[Train Secondary Review AI<br/>Multi-Class Classifier: FT RoBERTa ＋ LoRA]
+        C --> F[Build Knowledge Base<br/>Semantic Search DB: SBERT ＋ Faiss]
     end
 
     subgraph "Phase 3: Production Optimization"
-        D --> G[Model Quantization & Optimization<br/>ONNX Conversion + INT8 Quantization]
+        D --> G[Model Quantization & Optimization<br/>ONNX Conversion ＋ INT8 Quantization]
         E --> G
-        G --> H[Optimized Models<br/>2.35x Faster, 75% Smaller]
+        G --> H[Optimized Models<br/>2.35× Faster, 75% Smaller]
     end
 
     H --> I[Strategic Fork]
@@ -52,7 +52,7 @@ graph TD
     end
 
     subgraph "Path 2: R&D Agent System"
-        I --> L[Focus: Peak Accuracy<br/>Build Expert Committee AI<br/>3-Agent System (FT Model + RAG + LLM)]
+        I --> L[Focus: Peak Accuracy<br/>Build Expert Committee AI<br/>3-Agent System: FT Model・RAG・LLM]
         F --> L
         D --> L
         L --> M[Ablation Study<br/>FT Model vs. Agent System]
@@ -74,6 +74,7 @@ graph TD
     style L fill:#303F9F,color:#fff,stroke:#F5F5F5,stroke-width:2px
     style M fill:#3F51B5,color:#fff,stroke:#F5F5F5,stroke-width:2px
     style N fill:#5C6BC0,color:#fff,stroke:#F5F5F5,stroke-width:3px,stroke-dasharray: 5 5
+
 
 ```
 
