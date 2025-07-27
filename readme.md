@@ -26,40 +26,40 @@ The project culminates in two key deliverables:
 The entire project is structured as a systematic pipeline, flowing from data foundation to model development, optimization, and final service delivery.
 
 ```mermaid
-**graph TD
+graph TD
     subgraph "Phase 1: Data Foundation"
-        A[<b>RAW DATA</b><br/>Procurement Bid Collection] -->|'Cleanse & Standardize'| B(<b>High-Quality Labeled Dataset</b>);
-        B -->|'Stratified Sampling'| C[Train/Valid/Test Sets];
+        A[RAW DATA<br/>Procurement Bid Collection] -->|Cleanse & Standardize| B[High-Quality Labeled Dataset]
+        B -->|Stratified Sampling| C[Train/Valid/Test Sets]
     end
 
     subgraph "Phase 2: Core AI Model Development"
-        C --> D[<b>Train Primary Review AI</b><br/>Binary Classifier (FT RoBERTa+LoRA)];
-        C --> E[<b>Train Secondary Review AI</b><br/>Multi-Class Classifier (FT RoBERTa+LoRA)];
-        C --> F[<b>Build Knowledge Base</b><br/>Semantic Search DB (SBERT + Faiss)];
+        C --> D[Train Primary Review AI<br/>Binary Classifier (FT RoBERTa+LoRA)]
+        C --> E[Train Secondary Review AI<br/>Multi-Class Classifier (FT RoBERTa+LoRA)]
+        C --> F[Build Knowledge Base<br/>Semantic Search DB (SBERT + Faiss)]
     end
 
     subgraph "Phase 3: Production Optimization"
-       D --> G[<b>Model Quantization & Optimization</b><br/>ONNX Conversion + INT8 Quantization];
-       E --> G;
-       G --> H[<b>Optimized Models</b><br/>2.35x Faster, 75% Smaller];
-    end
-    
-    H --> I{<b>Strategic Fork</b>};
-
-    subgraph "<b>Path 1: Production API System</b>"
-        I --"> <b>Focus: Speed & Stability</b>" --> J[<b>Build Real-time Service</b><br/>Dual-Model API with FastAPI];
-        J --> K[<b>FINAL API SERVICE</b><br/>POST /classify_batch<br/><i>Delivers reliable business value</i>];
+        D --> G[Model Quantization & Optimization<br/>ONNX Conversion + INT8 Quantization]
+        E --> G
+        G --> H[Optimized Models<br/>2.35x Faster, 75% Smaller]
     end
 
-    subgraph "<b>Path 2: R&D Agent System</b>"
-        I --"> <b>Focus: Peak Accuracy</b>" --> L[<b>Build Expert Committee AI</b><br/>3-Agent System (FT Model + RAG + LLM)];
-        F --> L;
-        D --> L;
-        L --> M[<b>Ablation Study</b><br/>FT Model vs. Agent System];
-        M --> N[<b>Achieved 0.964 F1-Score</b><br/><i>Proved 88% error reduction</i>];
-    end**
+    H --> I[Strategic Fork]
 
-    %% Styling for better readability
+    subgraph "Path 1: Production API System"
+        I --> J[Focus: Speed & Stability<br/>Build Real-time Service<br/>Dual-Model API with FastAPI]
+        J --> K[FINAL API SERVICE<br/>POST /classify_batch<br/>Delivers reliable business value]
+    end
+
+    subgraph "Path 2: R&D Agent System"
+        I --> L[Focus: Peak Accuracy<br/>Build Expert Committee AI<br/>3-Agent System (FT Model + RAG + LLM)]
+        F --> L
+        D --> L
+        L --> M[Ablation Study<br/>FT Model vs. Agent System]
+        M --> N[Achieved 0.964 F1-Score<br/>Proved 88% error reduction]
+    end
+
+    %% Styling
     style A fill:#0277BD,color:#fff,stroke:#F5F5F5,stroke-width:2px
     style B fill:#039BE5,color:#fff,stroke:#F5F5F5,stroke-width:2px
     style C fill:#29B6F6,color:#000,stroke:#333,stroke-width:2px
@@ -73,7 +73,8 @@ The entire project is structured as a systematic pipeline, flowing from data fou
     style K fill:#F44336,color:#fff,stroke:#F5F5F5,stroke-width:4px
     style L fill:#303F9F,color:#fff,stroke:#F5F5F5,stroke-width:2px
     style M fill:#3F51B5,color:#fff,stroke:#F5F5F5,stroke-width:2px
-    N fill:#5C6BC0,color:#fff,stroke:#F5F5F5,stroke-width:3px,stroke-dasharray: 5 5
+    style N fill:#5C6BC0,color:#fff,stroke:#F5F5F5,stroke-width:3px,stroke-dasharray: 5 5
+
 ```
 
 ---
