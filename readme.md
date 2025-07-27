@@ -26,7 +26,7 @@ The project culminates in two key deliverables:
 The entire project is structured as a systematic pipeline, flowing from data foundation to model development, optimization, and final service delivery.
 
 ```mermaid
-graph TD
+**graph TD
     subgraph "Phase 1: Data Foundation"
         A[<b>RAW DATA</b><br/>Procurement Bid Collection] -->|'Cleanse & Standardize'| B(<b>High-Quality Labeled Dataset</b>);
         B -->|'Stratified Sampling'| C[Train/Valid/Test Sets];
@@ -57,7 +57,7 @@ graph TD
         D --> L;
         L --> M[<b>Ablation Study</b><br/>FT Model vs. Agent System];
         M --> N[<b>Achieved 0.964 F1-Score</b><br/><i>Proved 88% error reduction</i>];
-    end
+    end**
 
     %% Styling for better readability
     style A fill:#0277BD,color:#fff,stroke:#F5F5F5,stroke-width:2px
